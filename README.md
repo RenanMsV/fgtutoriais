@@ -92,7 +92,7 @@
 	- [Baixar Blender](https://www.blender.org/features/releases/2-77/)
 	- [Baixar AC3D Portable Gratis](https://goo.gl/tN5HEC)
 	- [Baixar Plugin Exportação/Importação .AC para Blender](https://github.com/NikolaiVChr/Blender-AC3D)
-	
+
 	- É necessário ter noções básicas de uso em cada um dos programas usados.
 	- Pegar medidas do que for modelar.
 	- Modelar principais partes ( sem detalhes )
@@ -107,6 +107,8 @@
 	- Importe no AC3D.
 	- Mova o objeto para o centro. ( x = 0, y = deixe como está, z = 0 )
 	- Salve o modelo. Isso fará com que o arquivo tenha um tamanho reduzido. ( A conversão para .ac pelo blender não é muito otimizada )
+
+	![Tut](img/comofazermodelos3dparaoflightgear/tut01.jpg?raw=true "Tut")
 
 ### Seção: Texturização
 

@@ -93,7 +93,7 @@
   - #### Como fazer texturas noturnas para modelos 3d
   	Ferramentas uteis:
 	- [PaintNet - Windows](https://www.getpaint.net/download.html)
-	- [PaintNet 300+ Plugins](http://paint.net.amihotornot.com.au/Download/PluginsPack/AttilaPro/)
+	- [PaintNet 300+ Plugins](http://paint.net.amihotornot.com.au/Download/PluginsPack/AttilaPro/) ou [PaintNet 300+ Plugins#2](downloads/PaintNet300Plugins.zip)
 
 	- É necessário ter noções basicas de uso em cada um dos programas usados.
 	- Abra a textura no paint.net

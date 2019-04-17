@@ -91,3 +91,14 @@
 ### Seção: Texturização
 
   - #### Como fazer texturas noturnas para modelos 3d
+  	Ferramentas uteis:
+	- [PaintNet - Windows](https://www.getpaint.net/download.html)
+	- [PaintNet 300+ Plugins](http://paint.net.amihotornot.com.au/Download/PluginsPack/AttilaPro/)
+
+	- É necessário ter noções basicas de uso em cada um dos programas usados.
+	- Abra a textura no paint.net
+	- Duplique a camada (para backup) e desabilite uma.
+	- Vá em Ajustes > Color Mixer. Selecione Brightness e coloque um valor geral de -95 ou o quanto preferir.
+	- Crie uma nova camada, sete o tipo para Subexposição de Cor.
+	- Selecione o Pincel, em dureza coloque 1, e em tamanho coloque o valor que quiser. Escolha uma cor e pinte as luzes. Separe cada cor de luz em uma nova camada.
+	- Por fim junte todas as camadas (com cuidado para não bugar) e salve em PNG.

@@ -5,7 +5,7 @@
     - [Como colocar objetos no cenário](#como-colocar-objetos-no-cenário)
   - [Como criar ou editar aeroportos](#como-criar-ou-editar-aeroportos)
     - [Primeiros passos](#primeiros-passos)
-    - [WED - World Editor](#wed-worldeditor)
+    - [WED - World Editor](#wed---worldeditor)
     - [Dat2Gnet](#dat2gnet)
     - [QGIS](#qgis)
     - [Terragear](#terragear)

@@ -102,23 +102,23 @@
       Para baixar : EM BREVE
 
       Python 3 - Python 3 (nao Python 2) é necessário para rodar scripts .py.
-      Para baixar : https://www.python.org/downloads/
+      Para baixar : [https://www.python.org/downloads](https://www.python.org/downloads/)
 
       Java - Necessario para rodar programas em java. > ou MINECRAFT <
-      Para baixar : https://www.java.com/pt_BR/download/manual.jsp
+      Para baixar : [https://www.java.com/pt_BR/download/manual.jsp](https://www.java.com/pt_BR/download/manual.jsp)
 
       WED - World Editor : Ferramenta para Xplane e FlightGear que cria o layout de aeroportos. Taxiways, Pistas, Patios, Estacionamentos, etc são feitos por ele.
-      Para baixar: https://developer.x-plane.com/tools/worldeditor/ ou (provavelmente desatualizado) use o que veio no download completo.
+      Para baixar: [https://developer.x-plane.com/tools/worldeditor/](https://developer.x-plane.com/tools/worldeditor/) ou (provavelmente desatualizado) use o que veio no download completo.
 
       QGIS - Programa para edição e visualização de arquivos de Landclasses.
-      Para baixar: https://qgis.org/en/site/
+      Para baixar: [https://qgis.org/en/site/](https://qgis.org/en/site/)
 
       Airport Web Generator - É Opcional, um site permite que você compile seu aeroporto para teste. TESTE apenas, já que somente o aeroporto será gerado,
       E não as áreas próximas. Apenas abra o site e envie o arquivo .dat do aeroporto gerado pelo WED.
-      Para acessar: http://ns334561.ip-5-196-65.eu/tgweb/
+      Para acessar: [http://ns334561.ip-5-196-65.eu/tgweb/](http://ns334561.ip-5-196-65.eu/tgweb/)
 
       WedoMaker : É opcional, mas bastante recomendado. Permite usar fotos de satélite para auxiliar no posicionamento e tamanho correto do layout do aeroporto.
-      Para baixar: https://wedomaker.wordpress.com/ ou (provavelmente desatualizado) use o que veio no download completo.
+      Para baixar: [https://wedomaker.wordpress.com/](https://wedomaker.wordpress.com/) ou (provavelmente desatualizado) use o que veio no download completo.
 
       Dat2Gnet : Script .py que converte as posicoes de estacionamento das aeronaves de ICAO.dat para ICAO.groundnet.xml (utilizado pelo FlightGear).
       Para baixar: Vem no download completo.
@@ -128,14 +128,14 @@
 
       SRTM 3 :
       Arquivos de Altitude Global, permitem que o cenário contenha os relevos reais. Mais facil pois vem em tiles abrangendo áreas (Recomendado para quem está começando)
-      Para baixar : É preciso saber exatamente a localidade do aeroporto requerido e baixar daqui o arquivo de relevo : http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm
+      Para baixar : É preciso saber exatamente a localidade do aeroporto requerido e baixar daqui o arquivo de relevo : [http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm](http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm)
 
       Outra fonte dos mesmos arquivos, porém nesse não vem em tiles, ele vem separado.
-      Para baixar : É preciso saber exatamente a localidade do aeroporto requerido e baixar daqui o arquivo de relevo : http://www.webgis.com/srtm3.html
+      Para baixar : É preciso saber exatamente a localidade do aeroporto requerido e baixar daqui o arquivo de relevo : [http://www.webgis.com/srtm3.html](http://www.webgis.com/srtm3.html)
       Clique no continente correto, ex: america do sul, e baixe o arquivo de acordo com a localizacao do aeroporto ex: S20W50.hgt.zip
 
-      Outra fonte só que para QGIS - Resolução muito boa, abrivel no programa QGIS.
-      Para baixar : É preciso saber exatamente a localidade do aeroporto requerido e baixar daqui o arquivo de relevo : http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp
+      Outra fonte só que para QGIS - Resolução muito boa, pode ser aberto no programa QGIS.
+      Para baixar : É preciso saber exatamente a localidade do aeroporto requerido e baixar daqui o arquivo de relevo : [http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp](http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp)
 
       Landclasses :
 
@@ -144,41 +144,41 @@
 
       Globais - FlightGear TerraGit
       Você pode criar seu cenário só com alguns requeridos. v0_landmass (terreno), v0_lake (rios, lagos), v0_urban (cidades).
-      Para baixar : https://github.com/FGMEMBERS-TERRAGIT?utf8=%E2%9C%93&q=V0&type=&language= e baixe todos.
+      Para baixar : [https://github.com/FGMEMBERS-TERRAGIT?utf8=%E2%9C%93&q=V0&type=&language=](https://github.com/FGMEMBERS-TERRAGIT?utf8=%E2%9C%93&q=V0&type=&language=) e baixe todos.
 
       Área - Basicamente o mesmo que o global mas apenas em uma área especifica. Diminue o tempo que demora para codificar e o espaço utilizado no HD.
       Não recomendado para quem está começando.
-      Para baixar : http://mapserver.mgras.net/shpdl/
+      Para baixar : [http://mapserver.mgras.net/shpdl/](http://mapserver.mgras.net/shpdl/)
 
       IBGE - Landclasses liberadas pelo Instituto Brasileiro de Geografia e Estatística (IBGE) e lógicamente só abrange áreas brasileiras.
-      Para baixar : ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/
+      Para baixar : [ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/)
 
       Open Street Maps - Shapefiles Wiki. Contém vários sites para download de Landclasses.
-      Para baixar : https://wiki.openstreetmap.org/wiki/Shapefiles
+      Para baixar : [https://wiki.openstreetmap.org/wiki/Shapefiles](https://wiki.openstreetmap.org/wiki/Shapefiles)
 
       GeoFabrik - Região Brasileira
-      Para baixar : http://download.geofabrik.de/south-america/brazil.html
+      Para baixar : [http://download.geofabrik.de/south-america/brazil.html](http://download.geofabrik.de/south-america/brazil.html)
 
       BBBike - Principais cidades do Mundo
       Contém : buildings, landuse, vegetation, places, points, railways, roads, waterways
-      Para baixar : https://download.bbbike.org/osm/bbbike/
+      Para baixar : [https://download.bbbike.org/osm/bbbike/](https://download.bbbike.org/osm/bbbike/)
 
       BBBike Extrator - Extrai landclasses por áreas. Comunitário, necessário aguardar outras pessoas que estejam na fila. Cerca de 10 minutos de espera.
       Contém : buildings, landuse, vegetation, places, points, railways, roads, waterways
-      Para baixar : https://extract.bbbike.org/
+      Para baixar : [https://extract.bbbike.org/](https://extract.bbbike.org/)
 
       Osm2Shp - Continental
-      Para baixar : http://osm2shp.ru/
+      Para baixar : [http://osm2shp.ru/](http://osm2shp.ru/)
 
       WGet - Programa que possibilita downloads completos de sites. Com esta ferramenta poderemos baixar todos arquivos de elevação de uma só vez.
       Para baixar : Vem no download completo.
 
       BBox Finder - Muito util para encontrar coordenadas de uma área (min lat, max lat, min lon, max lon)
-      Para baixar : http://bboxfinder.com/
+      Para baixar : [http://bboxfinder.com/](http://bboxfinder.com/)
 
     - ##### WED - WorldEditor
       Pessoas fazem aeroportos para Xplane ou Flightgear todos os dias, portanto provavelmente alguem já trabalhou no mesmo aeroporto que você quer fazer.
-      Confira em https://gateway.x-plane.com/airports/page todos aeroportos já feitos. (não necessário).
+      Confira em [https://gateway.x-plane.com/airports/page](https://gateway.x-plane.com/airports/page) todos aeroportos já feitos. (não necessário).
 
       Caso esteja abrindo o programa pela primeira vez:
       Abra o WED, clique em Choose X-Plane Folder e selecione a pasta em que extraiu o WED.
@@ -295,7 +295,7 @@
 
       Será baixado um (ou varios) arquivo .hgt.zip, coloque o na pasta TerraGear/APT/data/SRTM-3
 
-      Baixe arquivos de elevação aqui: http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm
+      Baixe arquivos de elevação aqui: [http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm](http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm)
 
       Ou faça o procedimento manual abaixo ...
 

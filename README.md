@@ -87,6 +87,26 @@
 ### Seção: Modelagem
 
   - #### Como fazer modelos 3d para o FlightGear
+	Ferramentas uteis:
+	- [Baixar Sketchup](https://www.sketchup.com/pt-BR)
+	- [Baixar Blender](https://www.blender.org/features/releases/2-77/)
+	- [Baixar AC3D Portable Gratis](https://goo.gl/tN5HEC)
+	- [Baixar Plugin Exportação/Importação .AC para Blender](https://github.com/NikolaiVChr/Blender-AC3D)
+	
+	- É necessário ter noções básicas de uso em cada um dos programas usados.
+	- Pegar medidas do que for modelar.
+	- Modelar principais partes ( sem detalhes )
+	- Coloque a textura.
+	- Arrume a posição da textura. Nunca rotacione a textura pelo sketchup... use um editor externo para isso.
+	- Modele o resto e vá texturizando.
+	- Exporte para .3ds ( com as opções da imagem abaixo )
+	- Importe no Blender
+	- Reduza a escala do modelo ( exportar em 3ds não mantém a escala do Sketchup... reduza para 0.1f como um começo, ajuste se precisar )
+	- Cuidado, modelos AC não suportam 2 texturas na mesma face. Portanto de uma olhada e se precisar ajuste.
+	- Exporte para .ac.
+	- Importe no AC3D.
+	- Mova o objeto para o centro. ( x = 0, y = deixe como está, z = 0 )
+	- Salve o modelo. Isso fará com que o arquivo tenha um tamanho reduzido. ( A conversão para .ac pelo blender não é muito otimizada )
 
 ### Seção: Texturização
 

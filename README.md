@@ -447,40 +447,42 @@
 ### Seção: Modelagem
 
   - #### Como fazer modelos 3d para o FlightGear
-  Ferramentas uteis:
-  - [Baixar Sketchup](https://www.sketchup.com/pt-BR)
-  - [Baixar Blender](https://www.blender.org/features/releases/2-77/)
-  - [Baixar AC3D Portable Gratis](https://goo.gl/tN5HEC)
-  - [Baixar Plugin Exportação/Importação .AC para Blender](https://github.com/NikolaiVChr/Blender-AC3D)
+    Ferramentas uteis:
+    - [Baixar Sketchup](https://www.sketchup.com/pt-BR)
+    - [Baixar Blender](https://www.blender.org/features/releases/2-77/)
+    - [Baixar AC3D Portable Gratis](https://goo.gl/tN5HEC)
+    - [Baixar Plugin Exportação/Importação .AC para Blender](https://github.com/NikolaiVChr/Blender-AC3D)
 
-  - É necessário ter noções básicas de uso em cada um dos programas usados.
-  - Pegar medidas do que for modelar.
-  - Modelar principais partes ( sem detalhes )
-  - Coloque a textura.
-  - Arrume a posição da textura. Nunca rotacione a textura pelo sketchup... use um editor externo para isso.
-  - Modele o resto e vá texturizando.
-  - Exporte para .3ds ( com as opções da imagem abaixo )
-  - Importe no Blender
-  - Reduza a escala do modelo ( exportar em 3ds não mantém a escala do Sketchup... reduza para 0.1f como um começo, ajuste se precisar )
-  - Cuidado, modelos AC não suportam 2 texturas na mesma face. Portanto de uma olhada e se precisar ajuste.
-  - Exporte para .ac.
-  - Importe no AC3D.
-  - Mova o objeto para o centro. ( x = 0, y = deixe como está, z = 0 )
-  - Salve o modelo. Isso fará com que o arquivo tenha um tamanho reduzido. ( A conversão para .ac pelo blender não é muito otimizada )
+    Tutorial:
+    - É necessário ter noções básicas de uso em cada um dos programas usados.
+    - Pegar medidas do que for modelar.
+    - Modelar principais partes ( sem detalhes )
+    - Coloque a textura.
+    - Arrume a posição da textura. Nunca rotacione a textura pelo sketchup... use um editor externo para isso.
+    - Modele o resto e vá texturizando.
+    - Exporte para .3ds ( com as opções da imagem abaixo )
+    - Importe no Blender
+    - Reduza a escala do modelo ( exportar em 3ds não mantém a escala do Sketchup... reduza para 0.1f como um começo, ajuste se precisar )
+    - Cuidado, modelos AC não suportam 2 texturas na mesma face. Portanto de uma olhada e se precisar ajuste.
+    - Exporte para .ac.
+    - Importe no AC3D.
+    - Mova o objeto para o centro. ( x = 0, y = deixe como está, z = 0 )
+    - Salve o modelo. Isso fará com que o arquivo tenha um tamanho reduzido. ( A conversão para .ac pelo blender não é muito otimizada )
 
-  ![Tut](img/comofazermodelos3dparaoflightgear/tut01.jpg?raw=true "Tut")
+    ![Tut](img/comofazermodelos3dparaoflightgear/tut01.jpg?raw=true "Tut")
 
 ### Seção: Texturização
 
   - #### Como fazer texturas noturnas para modelos 3d
-  Ferramentas uteis:
-  - [PaintNet - Windows](https://www.getpaint.net/download.html)
-  - [PaintNet 300+ Plugins](http://paint.net.amihotornot.com.au/Download/PluginsPack/AttilaPro/) ou [PaintNet 300+ Plugins#2](downloads/PaintNet300Plugins.zip)
+    Ferramentas uteis:
+    - [PaintNet - Windows](https://www.getpaint.net/download.html)
+    - [PaintNet 300+ Plugins](http://paint.net.amihotornot.com.au/Download/PluginsPack/AttilaPro/) ou [PaintNet 300+ Plugins#2](downloads/PaintNet300Plugins.zip)
 
-  - É necessário ter noções básicas de uso em cada um dos programas usados.
-  - Abra a textura no paint.net
-  - Duplique a camada (para backup) e desabilite uma.
-  - Vá em Ajustes > Color Mixer. Selecione Brightness e coloque um valor geral de -95 ou o quanto preferir.
-  - Crie uma nova camada, sete o tipo para Subexposição de Cor.
-  - Selecione o Pincel, em dureza coloque 1, e em tamanho coloque o valor que quiser. Escolha uma cor e pinte as luzes. Separe cada cor de luz em uma nova camada.
-  - Por fim junte todas as camadas (com cuidado para não bugar) e salve em PNG.
+    Tutorial:
+    - É necessário ter noções básicas de uso em cada um dos programas usados.
+    - Abra a textura no paint.net
+    - Duplique a camada (para backup) e desabilite uma.
+    - Vá em Ajustes > Color Mixer. Selecione Brightness e coloque um valor geral de -95 ou o quanto preferir.
+    - Crie uma nova camada, sete o tipo para Subexposição de Cor.
+    - Selecione o Pincel, em dureza coloque 1, e em tamanho coloque o valor que quiser. Escolha uma cor e pinte as luzes. Separe cada cor de luz em uma nova camada.
+    - Por fim junte todas as camadas (com cuidado para não bugar) e salve em PNG.

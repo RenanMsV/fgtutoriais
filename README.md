@@ -473,7 +473,7 @@
 
       ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut06.jpg?raw=true "Tut")
 
-      Arraste a imagem para dentro do site onde está escrito "clock or drag % drop".
+      Arraste a imagem para dentro do site onde está escrito "click or drag % drop".
 
       Então configure as variáveis para:
 

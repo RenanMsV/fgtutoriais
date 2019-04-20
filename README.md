@@ -11,7 +11,7 @@
     - [Terragear](#terragear)
     - [Finalizando](#finalizando)
   - ##### [Aeronave](#seção-aeronave)
-    - [Como colocar efeito reflexivo na fuselagem](#como-colocar-efeito-reflexivo-na-fuselagem)
+    - [Como aplicar reflexo e relevo na fuselagem](#como-aplicar-reflexo-e-relevo-na-fuselagem)
   - ##### [Sons](#seção-sons)
   - ##### [Modelagem](#seção-modelagem)
     - [Como fazer modelos 3d para o FlightGear](#como-fazer-modelos-3d-para-o-flightgear)
@@ -42,17 +42,17 @@
 
     Vamos começar abrindo a launcher, selecionando o avião "UFO" e escolhendo o seu aeroporto que quer editar como ponto de partida.
 
-    ![Tut](img/comocolocarobjetosnocenario/tut01.jpg?raw=true "Tut")
+    ![Tut](assets/img/comocolocarobjetosnocenario/tut01.jpg?raw=true "Tut")
 
     Ele irá se mover como um avião normal, portanto aumente o throttle e se mova pelo cenário. Escolha uma posição boa.
 
-    ![Tut](img/comocolocarobjetosnocenario/tut02.jpg?raw=true "Tut")
+    ![Tut](assets/img/comocolocarobjetosnocenario/tut02.jpg?raw=true "Tut")
 
     De um clique com o botão esquerdo do mouse no local em que quer colocar um modelo. Perceba que irá aparecer um modelo padrão no local.
 
     Então aperte CTRL + Page UP para subir, e CTRL + Page Down para descer na lista de modelos. Vá clicando até encontrar algum que queira. Vou colocar uma aeronave.
 
-    ![Tut](img/comocolocarobjetosnocenario/tut03.jpg?raw=true "Tut")
+    ![Tut](assets/img/comocolocarobjetosnocenario/tut03.jpg?raw=true "Tut")
 
     Mas perceba que a aeronave está dentro do chão. Para mudar isto vamos apertar o botão "=" (igual) para abrir o menu de posicionamento e rotação dos modelos.
 
@@ -64,7 +64,7 @@
 
     No meu caso vou usar o controle de altitude para move-lo para cima.
 
-    ![Tut](img/comocolocarobjetosnocenario/tut04.jpg?raw=true "Tut")
+    ![Tut](assets/img/comocolocarobjetosnocenario/tut04.jpg?raw=true "Tut")
 
     Para mover um objeto de lugar você também pode seleciona-lo e com ALT+Botão Esquerdo em cima do novo local onde quer coloca-lo.
 
@@ -88,7 +88,7 @@
 
     O arquivo aberto conterá mais ou menos esta estrutura:
 
-    ![Tut](img/comocolocarobjetosnocenario/tut05.jpg?raw=true "Tut")
+    ![Tut](assets/img/comocolocarobjetosnocenario/tut05.jpg?raw=true "Tut")
 
     Tudo que utilizaremos é a localização do cenário que fica em stg-path e a linha de configuração do objeto que fica em object line.
 
@@ -108,7 +108,7 @@
     Dentro do arquivo que criamos vamos então escrever essa linha, dar enter e escrever as próximas (caso você tenha colocado vários objetos.)
     Um exemplo:
 
-    ![Tut](img/comocolocarobjetosnocenario/tut06.jpg?raw=true "Tut")
+    ![Tut](assets/img/comocolocarobjetosnocenario/tut06.jpg?raw=true "Tut")
 
     Salve o arquivo e coloque o no diretório data\Scenery\Objects\w050s30\w048s23. Pois ali em cima diz que o diretório é "w050s30/w048s23/2166987.stg".
 
@@ -116,7 +116,7 @@
 
     Pronto suas modificações já podem ser vistas ao entrar no jogo.
 
-    ![Tut](img/comocolocarobjetosnocenario/tut07.jpg?raw=true "Tut")
+    ![Tut](assets/img/comocolocarobjetosnocenario/tut07.jpg?raw=true "Tut")
 
     6 - Compartilhando seu trabalho com outras pessoas
 
@@ -438,7 +438,200 @@
 
 ### Seção: Aeronave
 
-  - #### Como colocar efeito reflexivo na fuselagem
+  - #### Como aplicar reflexo e relevo na fuselagem
+
+    - ##### Informações importantes
+      Este efeito permite deixar um reflexo na aeronave e as marcas de relevo na mesma.
+
+      Alguns exemplos abaixo:
+
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut02.jpg?raw=true "Tut")
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut01.jpg?raw=true "Tut")
+
+      - Este efeito só é visível caso o usuário esteja com as seguintes configurações:
+
+        - Configurações de renderização de shader de modelo deve estar ativada.
+
+          ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut05.jpg?raw=true "Tut")
+
+      - Este efeito requer cuidados ao aplicar:
+        - Se aplicado em objetos ou superfícies sem [mapeamento UV](https://pt.wikipedia.org/wiki/Mapeamento_UV) fará o jogo travar e fechar. Sempre confira se o objeto possuí mapeamento.
+        - Este efeito só deve ser aplicado em superfícies visíveis e de preferencia somente em superfícies que façam parte da [livery](http://wiki.flightgear.org/Howto:Edit_a_livery) da aeronave.
+        - Este efeito irá reduzir desempenho do jogo. Principalmente se aplicado em muitos objetos. Use com moderação.
+
+    - ##### Preparações:
+
+      Pegue o arquivo .png ou .jpg da livery da aeronave que você quer aplicar. É recomendável que não possua nomes / números / identificações, ou seja, deve possuir apenas as linhas que compõem a estrutura da fuselagem da aeronave. Já que essa vai servir para dar o efeito de relevo.
+
+      Vamos utilizar essa aqui de um AT-29 como exemplo:
+
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut03.png?raw=true "Tut")
+
+      Precisamos gerar um [normal map](http://wiki.flightgear.org/Howto:Use_the_normal_map_effect_in_aircraft).
+
+      Vamos utilizar este site [Normal Map Online](http://cpetry.github.io/NormalMap-Online/)
+
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut06.jpg?raw=true "Tut")
+
+      Arraste a imagem para dentro do site onde está escrito "clock or drag % drop".
+
+      Então configure as variáveis para:
+
+        - Em Strength coloque 1.0
+        - Em Level coloque 10.0
+        - Em Blur/Sharp deixe 0
+        - Em Filter deixe Sobel
+        - Em Invert deixe R, G e Height desmarcados
+
+        ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut07.jpg?raw=true "Tut")
+
+      Então clique em Download para baixar o seu normal map.
+
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut08.jpg?raw=true "Tut")
+
+      Normal map gerado:
+
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut03n.png?raw=true "Tut")
+
+      Salve este código abaixo como fuse_bumpreflect.eff
+
+      ```xml
+      <?xml version="1.0" encoding="utf-8"?>
+      <PropertyList>
+        <name>$MY_AIRCRAFT$_bumpspecreflect</name>
+        <inherits-from>Effects/model-combined-deferred</inherits-from>
+        <parameters>
+          <rain-enabled type="int">2</rain-enabled>
+          <normalmap-enabled type="int">1</normalmap-enabled>
+          <normalmap-dds type="int">0</normalmap-dds>
+          <texture n="2">
+            <image>Aircraft/$MY_AIRCRAFT$/Models/Effects/fuse_reflection_effect/$MY_AIRCRAFT$-normal.png</image>
+            <filter>linear-mipmap-linear</filter>
+            <wrap-s>repeat</wrap-s>
+            <wrap-t>repeat</wrap-t>
+            <internal-format>normalized</internal-format>
+          </texture>
+          <lightmap_enabled type="int">0</lightmap_enabled>
+          <reflection-enabled type="int">1</reflection-enabled>
+          <reflect-map-enabled type="int">1</reflect-map-enabled>
+          <reflection-correction type="float"><use>/sim/rendering/refl_correction</use></reflection-correction>
+          <reflection-fresnel-factor type="float"><use>/sim/rendering/fresnel-factor</use></reflection-fresnel-factor>
+          <reflection-type type="int"><use>/sim/rendering/refl-type</use></reflection-type>
+          <reflection-dynamic type="int">1</reflection-dynamic>
+          <texture n="4">
+            <image>Aircraft/$MY_AIRCRAFT$/Models/Effects/fuse_reflection_effect/grey.png</image>
+            <filter>linear-mipmap-linear</filter>
+            <wrap-s>clamp</wrap-s>
+            <wrap-t>clamp</wrap-t>
+            <internal-format>normalized</internal-format>
+          </texture>
+          <texture n="5">
+            <type>cubemap</type>
+            <images>
+              <positive-x>Aircraft/Generic/Effects/fgfs-sky2/1.png</positive-x>
+              <negative-x>Aircraft/Generic/Effects/fgfs-sky2/4.png</negative-x>
+              <positive-y>Aircraft/Generic/Effects/fgfs-sky2/2.png</positive-y>
+              <negative-y>Aircraft/Generic/Effects/fgfs-sky2/3.png</negative-y>
+              <positive-z>Aircraft/Generic/Effects/fgfs-sky2/6.png</positive-z>
+              <negative-z>Aircraft/Generic/Effects/fgfs-sky2/5.png</negative-z>
+            </images>
+          </texture>
+          <texture n="6">
+            <image>Aircraft/$MY_AIRCRAFT$/Models/Effects/fuse_reflection_effect/alpha.png</image>
+            <type>2d</type>
+            <filter>linear-mipmap-linear</filter>
+            <wrap-s>repeat</wrap-s>
+            <wrap-t>repeat</wrap-t>
+            <internal-format>normalized</internal-format>
+          </texture>
+          <reflection-fresnel type="float">0.00</reflection-fresnel>
+          <reflection-rainbow type="float">0.00</reflection-rainbow>
+          <reflection-noise type="float">0.00</reflection-noise>
+          <ambient-correction type="float">0.0</ambient-correction>
+          <dirt-enabled type="int">0</dirt-enabled>
+          <dirt-color type="vec3d">1.0 1.0 1.0</dirt-color>
+          <dirt-factor type="float">0.5</dirt-factor>
+        </parameters>
+      <!-- ####################
+      ### NORMALMAP INCLUDE ###
+      ######################### -->
+      <generate>
+        <tangent type="int">6</tangent>
+        <binormal type="int">7</binormal>
+      </generate>
+
+      <technique n="4">
+        <pass>
+          <program>
+            <attribute>
+              <name>tangent</name>
+              <index>6</index>
+            </attribute>
+            <attribute>
+              <name>binormal</name>
+              <index>7</index>
+            </attribute>
+          </program>
+        </pass>
+      </technique>
+
+      <technique n="7">
+        <pass>
+          <program>
+            <attribute>
+              <name>tangent</name>
+              <index>6</index>
+            </attribute>
+            <attribute>
+              <name>binormal</name>
+              <index>7</index>
+            </attribute>
+          </program>
+        </pass>
+      </technique>
+      <technique n="9">
+        <pass>
+          <program>
+            <attribute>
+              <name>tangent</name>
+              <index>6</index>
+            </attribute>
+            <attribute>
+              <name>binormal</name>
+              <index>7</index>
+            </attribute>
+          </program>
+        </pass>
+      </technique>
+      <!-- ########################
+      ### END NORMALMAP INCLUDE ###
+      ############################# -->
+      </PropertyList>
+      ```
+
+      O local em que o arquivo deve ser salvo em sua aeronave é na pasta Models/Effects/fuse_reflection_effect por exemplo:
+
+          $FGDATA$/Aircrafts/Airbus320/Models/Effects/fuse_reflection_effect/
+
+      Agora substitua no código onde está escrito $MY_AIRCRAFT$ pelo nome de sua aeronave (não utilize espaços ou caracteres especiais). Use a ferramenta replace de seu editor de texto preferido caso queira substituir tudo mais rapidamente.
+
+      Por exemplo se estivermos fazendo um Airbus320 utilizando o editor Atom:
+
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut09.jpg?raw=true "Tut")
+
+      Agora copie a imagem de normal map que você gerou antes para a pasta e troque o nome para NOME_DA_AERONAVE-normal.png. Por exemplo:
+
+          $FGDATA$/Aircrafts/Airbus320/Models/Effects/fuse_reflection_effect/Airbus320-normal.png
+
+      Agora coloque baixe essas [2 fotos](assets/downloads/fuselagereflectalphagrey.zip) e coloque na pasta também.
+
+      A pasta deve ficar assim:
+
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut10.jpg?raw=true "Tut")
+
+      Agora vá no arquivo de modelo [XML](http://wiki.flightgear.org/FlightGear_configuration_via_XML) de sua aeronave.
+
+      No meu caso AT-29\Models\AT-29.xml
 
 ### Seção: Sons
 
@@ -469,14 +662,14 @@
     - Mova o objeto para o centro. ( x = 0, y = deixe como está, z = 0 )
     - Salve o modelo. Isso fará com que o arquivo tenha um tamanho reduzido. ( A conversão para .ac pelo blender não é muito otimizada )
 
-    ![Tut](img/comofazermodelos3dparaoflightgear/tut01.jpg?raw=true "Tut")
+    ![Tut](assets/img/comofazermodelos3dparaoflightgear/tut01.jpg?raw=true "Tut")
 
 ### Seção: Texturização
 
   - #### Como fazer texturas noturnas para modelos 3d
     Ferramentas uteis:
     - [PaintNet - Windows](https://www.getpaint.net/download.html)
-    - [PaintNet 300+ Plugins](http://paint.net.amihotornot.com.au/Download/PluginsPack/AttilaPro/) ou [PaintNet 300+ Plugins#2](downloads/PaintNet300Plugins.zip)
+    - [PaintNet 300+ Plugins](http://paint.net.amihotornot.com.au/Download/PluginsPack/AttilaPro/) ou [PaintNet 300+ Plugins#2](assets/downloads/PaintNet300Plugins.zip)
 
     Tutorial:
     - É necessário ter noções básicas de uso em cada um dos programas usados.

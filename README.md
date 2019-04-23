@@ -514,9 +514,9 @@
           <lightmap_enabled type="int">0</lightmap_enabled>
           <reflection-enabled type="int">1</reflection-enabled>
           <reflect-map-enabled type="int">1</reflect-map-enabled>
-          <reflection-correction type="float"><use>/sim/rendering/refl_correction</use></reflection-correction>
-          <reflection-fresnel-factor type="float"><use>/sim/rendering/fresnel-factor</use></reflection-fresnel-factor>
-          <reflection-type type="int"><use>/sim/rendering/refl-type</use></reflection-type>
+          <reflection-correction type="float"><use>/sim/rendering/$MY_AIRCRAFT$/refl_correction</use></reflection-correction>
+          <reflection-fresnel-factor type="float"><use>/sim/rendering/$MY_AIRCRAFT$/fresnel-factor</use></reflection-fresnel-factor>
+          <reflection-type type="int"><use>/sim/rendering/$MY_AIRCRAFT$/refl-type</use></reflection-type>
           <reflection-dynamic type="int">1</reflection-dynamic>
           <texture n="4">
             <image>Aircraft/$MY_AIRCRAFT$/Models/Effects/fuse_reflection_effect/grey.png</image>
@@ -611,7 +611,7 @@
 
       O local em que o arquivo deve ser salvo em sua aeronave é na pasta Models/Effects/fuse_reflection_effect por exemplo:
 
-          $FGDATA$/Aircrafts/Airbus320/Models/Effects/fuse_reflection_effect/
+          $FGDATA$/Aircraft/Airbus320/Models/Effects/fuse_reflection_effect/
 
       Agora substitua no código onde está escrito $MY_AIRCRAFT$ pelo nome de sua aeronave (não utilize espaços ou caracteres especiais). Use a ferramenta replace de seu editor de texto preferido caso queira substituir tudo mais rapidamente.
 
@@ -621,7 +621,7 @@
 
       Agora copie a imagem de normal map que você gerou antes para a pasta e troque o nome para NOME_DA_AERONAVE-normal.png. Por exemplo:
 
-          $FGDATA$/Aircrafts/Airbus320/Models/Effects/fuse_reflection_effect/Airbus320-normal.png
+          $FGDATA$/Aircraft/Airbus320/Models/Effects/fuse_reflection_effect/Airbus320-normal.png
 
       Agora coloque baixe essas [2 fotos](assets/downloads/fuselagereflectalphagrey.zip) e coloque na pasta também.
 
@@ -631,7 +631,113 @@
 
       Agora vá no arquivo de modelo [XML](http://wiki.flightgear.org/FlightGear_configuration_via_XML) de sua aeronave.
 
-      No meu caso AT-29\Models\AT-29.xml
+      No meu caso AT-29\Models\AT-29.xml, e procure aonde está a parte que coloca a livery. Exemplo:
+
+      ```xml
+      <animation>
+        <type>material</type>
+        <object-name>GroupFuselage</object-name>
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>fuselage</texture-prop>
+        <texture>Liveries/USA/fuselage.png</texture>
+      </animation>
+      ```
+
+      - Detalhe que neste caso só aparece um objeto nomeado GroupFuselage pois no FlightGear podemos agrupar objetos para uso posterior. Se procurarmos no arquivo iremos encontrar onde este grupo foi criado:
+
+        ```xml
+        <animation>
+          <name>GroupFuselage</name>
+          <object-name>fuselage</object-name>
+          <object-name>entradadear</object-name>
+          <object-name>VentralFin</object-name>
+          <object-name>Spinner</object-name>
+          <object-name>Speedbrake</object-name>
+          <object-name>Rudder</object-name>
+          <object-name>NoseWellCover</object-name>
+        </animation>
+        ```
+        Portanto esse grupo chamado GroupFuselage contém os objetos fuselage, entradadear, VentralFin, Spinner, SpeedBrake, Rudder e NoseWellCover. Todos terão suas texturas substituídas dependendo da livery escolhida. Iremos também aplicar o efeito de reflexo nesses objetos.
+
+      Aqui está um exemplo de código para aplicar o efeito:
+
+      ```xml
+      <effect>
+        <inherits-from>Aircraft/$MY_AIRCRAFT$/Effects/fuse_reflection_effect/fuse_bumpreflect</inherits-from>
+        <object-name>objeto_exemplo</object-name>
+      </effect>
+      ```
+
+      No caso para o AT-29 pegamos a lista de objetos que compõem a fuselagem e aplicamos o efeito, o código fica assim:
+
+      ```xml
+      <effect>
+        <inherits-from>Aircraft/AT-29/Effects/fuse_reflection_effect/fuse_bumpreflect</inherits-from>
+        <object-name>fuselage</object-name>
+        <object-name>entradadear</object-name>
+        <object-name>VentralFin</object-name>
+        <object-name>Spinner</object-name>
+        <object-name>Speedbrake</object-name>
+        <object-name>Rudder</object-name>
+        <object-name>NoseWellCover</object-name>
+      </effect>
+      ```
+
+      Verifique se não existem outros efeitos sendo aplicados para o mesmo objeto pois no FlightGear cada objeto pode conter apenas um efeito. Novos efeitos adicionados no arquivo irão substituir o efeito antigo.
+
+      Resultado:
+
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut11.jpg?raw=true "Tut")
+
+      Mas perceba que parece que a aeronave não tem livery, e é feita de lata. Para corrigir isso precisamos alterar algumas propriedades do efeito usando a ferramenta Property Browser. No meu caso elas ficam no node /sim/rendering/AT-29.
+
+      - Altere o valor de fresnel-factor para 0
+      - Altere o valor de refl-type para 2 ( 1 para normal, 2 para suporte ALS incluso)
+      - Altere o valor de refl_correction para um valor em torno de -1 e 1. Dependendo do valor ele fica com mais reflexão ou menos. Ajuste do modo que preferir.
+
+      Ficando assim:
+
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut12.jpg?raw=true "Tut")
+
+      Mas ter que alterar esses valores toda vez nas propriedades não é bom, para corrigir isso vamos definir esses valores no arquivo -set de definição da aeronave. No meu caso Aircraft/AT-29/AT-29-set.xml
+
+      Abra o arquivo e procure por 'rendering'.
+      No meu caso encontrei:
+
+      ```xml
+      <rendering>
+        <redout>
+          <parameters>
+            <blackout-onset-g>4.0</blackout-onset-g>
+            <blackout-complete-g>8.0</blackout-complete-g>
+          </parameters>
+        </redout>
+      </rendering>
+      ```
+
+      Basta então adicionar o node AT-29 (ou o nome de sua aeronave) com as propriedades do efeito.
+
+      ```xml
+       <rendering>
+        <redout>
+          <parameters>
+            <blackout-onset-g>4.0</blackout-onset-g>
+            <blackout-complete-g>8.0</blackout-complete-g>
+          </parameters>
+        </redout>
+        <AT-29>
+          <refl_correction>-0.5</refl_correction>
+          <refl-type>2</refl-type>
+          <fresnel-factor>0</fresnel-factor>
+        </AT-29>
+      </rendering>
+      ```
+
+      E pronto, toda vez que essa aeronave carregar o efeito estará assim:
+
+      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut13.jpg?raw=true "Tut")
+
+      Os valores podem variar de aeronave para aeronave, portanto teste valores diferentes para saber o melhor para a sua aeronave.
 
 ### Seção: Sons
 

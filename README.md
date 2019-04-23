@@ -663,7 +663,7 @@
 
       ```xml
       <effect>
-        <inherits-from>Aircraft/$MY_AIRCRAFT$/Effects/fuse_reflection_effect/fuse_bumpreflect</inherits-from>
+        <inherits-from>Aircraft/$MY_AIRCRAFT$/Models/Effects/fuse_reflection_effect/fuse_bumpreflect</inherits-from>
         <object-name>objeto_exemplo</object-name>
       </effect>
       ```
@@ -672,7 +672,7 @@
 
       ```xml
       <effect>
-        <inherits-from>Aircraft/AT-29/Effects/fuse_reflection_effect/fuse_bumpreflect</inherits-from>
+        <inherits-from>Aircraft/AT-29/Models/Effects/fuse_reflection_effect/fuse_bumpreflect</inherits-from>
         <object-name>fuselage</object-name>
         <object-name>entradadear</object-name>
         <object-name>VentralFin</object-name>

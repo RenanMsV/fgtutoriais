@@ -733,10 +733,6 @@
       </rendering>
       ```
 
-      E pronto, toda vez que essa aeronave carregar o efeito estará assim:
-
-      ![Tut](assets/img/comoaplicarreflexoerelevonafuselagem/tut13.jpg?raw=true "Tut")
-
       Os valores podem variar de aeronave para aeronave, portanto teste valores diferentes para saber o melhor para a sua aeronave.
 
 ### Seção: Sons

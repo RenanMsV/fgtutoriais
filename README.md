@@ -240,6 +240,8 @@
          |--Resources
          |--WED.exe
       ```
+      Exemplo:
+      ![Tut](assets/img/comocriaroueditaraeroportos/tut01.jpg?raw=true "Tut")
       ###### AVISO: O WED procura por essa estrutura de diretórios específica e nomes de diretórios específicos!
 
       Abra o WED, clique em Choose X-Plane Folder e selecione a pasta em que extraiu o WED.

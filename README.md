@@ -145,7 +145,7 @@
       Programas necessários:
 
       Download Completo : Arquivo zipado com todas ferramentas necessárias. Estão desatualizadas. Use-as caso as oficiais atualizadas não funcionem mais.
-      Para baixar : EM BREVE
+      Para baixar : [Download Completo](assets/downloads/FlightGearSceneryDevelopmentPack.7z)
 
       Python 3 - Python 3 (não Python 2) é necessário para rodar scripts .py.
       Para baixar : [https://www.python.org/downloads](https://www.python.org/downloads/)

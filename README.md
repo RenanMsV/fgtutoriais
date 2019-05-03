@@ -226,7 +226,22 @@
       Pessoas fazem aeroportos para Xplane ou Flightgear todos os dias, portanto provavelmente alguém já trabalhou no mesmo aeroporto que você quer fazer.
       Confira em [https://gateway.x-plane.com/airports/page](https://gateway.x-plane.com/airports/page) todos aeroportos já feitos. (não necessário).
 
-      Caso esteja abrindo o programa pela primeira vez:
+      FlightGear Wiki - [WED](http://wiki.flightgear.org/WorldEditor).
+
+      Antes de abrir o WED pela primeira vez:
+
+      O X-Plane em si não precisa ser instalado antes de usar o WED. No entanto, o WED exigirá que você escolha a pasta do X-Plane antes de permitir que você faça qualquer coisa. Vamos então fingir que estamos com X-Plane instalado.
+
+      Crie um diretório de trabalho com a seguinte estrutura antes de iniciar o WED pela primeira vez.
+      ```
+      diretorio de trabalho <-- Escolha um nome
+         |--Custom Scenery
+         |--Global Scenery
+         |--Resources
+         |--WED.exe
+      ```
+      ###### AVISO: O WED procura por essa estrutura de diretórios específica e nomes de diretórios específicos!
+
       Abra o WED, clique em Choose X-Plane Folder e selecione a pasta em que extraiu o WED.
 
       Criando o projeto:
@@ -300,6 +315,14 @@
       Clique em File > Export Target e selecione XPlane 10.50.
 
       Selecione na hierarquia de objetos o aeroporto que você fez. Clique em File > Export apt.dat,  salve em algum lugar como ICAO.dat, já pode fechar o WED.
+
+      Tutoriais avançados em Inglês:
+
+      - [Airport Creation - Xplane-wiki](http://wiki.x-plane.com/Airport_Creation)
+      - [WED tutorial parte 1 (Xsimreviews blog)](https://web.archive.org/web/20131024102137/http://xsimreviews.com/2012/12/16/x-plane-scenery-design-tutorial-4-wed-pt1/)
+      - [WED tutorial parte 2 (Xsimreviews blog)](https://web.archive.org/web/20140403230901/http://xsimreviews.com/2013/02/03/x-plane-scenery-design-tutorial-5-wed-part-ii/)
+      - [Manual Online WED](https://developer.x-plane.com/manuals/wed/)
+      - [WED Tutoriais no Youtube](https://www.youtube.com/playlist?list=PLGRsg_6rB1D4vm0UHvHm6J-rvIyUBGN_K)
 
     - ##### Dat2Gnet
 

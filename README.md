@@ -380,6 +380,10 @@
 
     - ##### Terragear
 
+      Extraindo o Terragear:
+
+      <iframe width="560" src="https://www.youtube.com/embed/jKgTxxRE2cY" frameborder="0" allowfullscreen="" height="315"></iframe>
+
       Abra a pasta TerraGear/bin/ e abra o arquivo EXECUTAR_TERRAGEAR_GUI.bat . O TerraGear GUI será executado.
 
       Na aba Start terá que colocar 3 diretórios para que o programa salve dados em seu computador.
@@ -390,6 +394,8 @@
 
       Em FlightGear Root selecione a pasta Data de seu FlightGear. Ex: "C://Games/FlightGear2017/Data/"
 
+      <iframe width="560" src="https://www.youtube.com/embed/hH0V3HHIaXQ" frameborder="0" allowfullscreen="" height="315"></iframe>
+
       Na aba Elevation é onde controlamos os arquivos de elevação.
 
       Em HTG Files Directory selecione a pasta TerraGear/APT/data/SRTM-3/
@@ -397,6 +403,8 @@
       - Em Min. Nodes deixe 50
       - Em Max. Nodes deixe 1000
       - E em Max. Error deixe 40
+
+      <iframe width="560" src="https://www.youtube.com/embed/5TH92J7urlc" frameborder="0" allowfullscreen="" height="315"></iframe>
 
       Baixando e processando arquivos de elevação:
 
@@ -408,15 +416,23 @@
 
       Baixe arquivos de elevação aqui: [http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm](http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm)
 
+      Baixando arquivos de elevação:
+
       <iframe width="560" src="https://www.youtube.com/embed/9o-IOv30mhY" frameborder="0" allowfullscreen="" height="315"></iframe>
 
       Por fim, copie todos arquivos zip baixados para a pasta TerraGear/APT/data/SRTM-3
 
+      <iframe width="560" src="https://www.youtube.com/embed/pFr50I1qavI" frameborder="0" allowfullscreen="" height="315"></iframe>
+
       Dentro do TerraGear GUI vá na aba Elevation e clique em Convert Elevation Data e aguarde o programa converter(quanto mais arquivos .hgt.zip estiverem na pasta mais vai demorar).
+
+      <iframe width="560" src="https://www.youtube.com/embed/6dPpJSwrogE" frameborder="0" allowfullscreen="" height="315"></iframe>
 
       Quando terminar (barra azul completa e escrito 100%) vá na pasta TerraGear/APT/data/SRTM-3 e mova todos arquivos .hgt.zip para a pasta TerraGear/APT/data/backup.
 
       Ou apague-os, você não irá precisar deles. Caso você não os mova ou apague na próxima conversão de algum arquivo eles serão convertidos novamente inutilmente, já que você já os converteu anteriormente.
+
+      <iframe width="560" src="https://www.youtube.com/embed/cq7518_47oY" frameborder="0" allowfullscreen="" height="315"></iframe>
 
       Baixando e processando arquivos de LandClass:
 
@@ -444,6 +460,8 @@
       - v0_urban.dbf
       - ...
 
+      <iframe width="560" src="https://www.youtube.com/embed/2CrxQDKjGmM" frameborder="0" allowfullscreen="" height="315"></iframe>
+
       Agora vá no TerraGearGUI, vá na aba Materials, clique em Retrieve shapefiles e clique em Ok.
 
       Após ele irá mostrar uma tabela. A tabela contém o nome da shapefile, material, largura de linha (usado para ruas, estradas) e SQL.
@@ -456,13 +474,29 @@
 
       É questão de logica. Mas nada impede de você utilizar o material 'Grass' no v0_urban porém todas as cidades irão ter uma textura de grama.
 
+      <iframe width="560" src="https://www.youtube.com/embed/7huW9TRDSF0" frameborder="0" allowfullscreen="" height="315"></iframe>
+
       Logo após preencher todos corretamente clique no botão escrito 'Decode Shapefiles and Apply Material'.
 
+      <iframe width="560" src="https://www.youtube.com/embed/hAdNKx6opSI" frameborder="0" allowfullscreen="" height="315"></iframe>
+
       Este processo levará horas ou minutos dependendo do poder de processamento do computador. Mas fique tranquilo isto só será necessário fazer a primeira vez.
+
+      As vezes pode bugar e não começar a decodificar, ou nunca avisar que acabou e você ficar esperando atoa. Para verificar se está decodificando basta olhar se o processo ogr-decode está rodando no gerenciador de tarefas.
+
+      <iframe width="560" src="https://www.youtube.com/embed/Z6lRss7mHYo" frameborder="0" allowfullscreen="" height="315"></iframe>
 
       Como estes arquivos de LandClass disponibilizados pelo Terragit são globais e cobrem o mundo todo você só precisa decodificar uma vez. Exceto se você apagar os arquivos decodificados por algum motivo. Ai terá que refazer a decodificação.
 
       Caso você consiga encontrar arquivos de LandClass menores, cobrindo apenas a área do aeroporto em que você está trabalhando o processo de decodificação será muito mais rápido, sendo feito em poucos minutos ou segundos. Porém logicamente será necessário decodificar toda vez que estiver trabalhando em um novo aeroporto.
+
+      No final os arquivos decodificados devem ficar assim:
+
+      <iframe width="560" src="https://www.youtube.com/embed/3G7TpJuDQcQ" frameborder="0" allowfullscreen="" height="315"></iframe>
+
+      Cortando arquivos de LandClass:
+
+      <iframe width="560" src="https://www.youtube.com/embed/vwuj5FFSfG4" frameborder="0" allowfullscreen="" height="315"></iframe>
 
       Continuação em Breve......
 

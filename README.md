@@ -412,7 +412,7 @@
 
       Vá no site onde se encontram os arquivos SRTM-3 e baixe o arquivo correspondente a área do aeroporto. Ou baixe vários caso seja de interesse. (por que não todos?)
 
-      Será baixado um (ou vários) arquivo .hgt.zip, coloque o na pasta TerraGear/APT/data/SRTM-3
+      Será baixado um (ou vários) arquivo zip com arquivos .hgt dentro.
 
       Baixe arquivos de elevação aqui: [http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm](http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm)
 
@@ -420,7 +420,7 @@
 
       <iframe width="560" src="https://www.youtube.com/embed/9o-IOv30mhY" frameborder="0" allowfullscreen="" height="315"></iframe>
 
-      Por fim, copie todos arquivos zip baixados para a pasta TerraGear/APT/data/SRTM-3
+      Por fim, extraia todos arquivos .hgt baixados para a pasta TerraGear/APT/data/SRTM-3
 
       <iframe width="560" src="https://www.youtube.com/embed/pFr50I1qavI" frameborder="0" allowfullscreen="" height="315"></iframe>
 
@@ -476,6 +476,8 @@
 
       <iframe width="560" src="https://www.youtube.com/embed/7huW9TRDSF0" frameborder="0" allowfullscreen="" height="315"></iframe>
 
+      ###### Detalhe, alguns nomes de materiais não estão corretamente colocados no programa, por exemplo, DryCropPastureCover deveria ser somente DryCrop, e GrassLand deveria ser Grassland com L minúsculo. Colocar o nome errado não deixa que o programa decodifique. Para colocar o nome certo basta editar o nome manualmente na aba de materiais. Para saber os nomes corretos basta abrir o arquivo "Terragear/share/Terragear/default_priorities.txt"  
+
       Logo após preencher todos corretamente clique no botão escrito 'Decode Shapefiles and Apply Material'.
 
       <iframe width="560" src="https://www.youtube.com/embed/hAdNKx6opSI" frameborder="0" allowfullscreen="" height="315"></iframe>
@@ -498,11 +500,64 @@
 
       <iframe width="560" src="https://www.youtube.com/embed/vwuj5FFSfG4" frameborder="0" allowfullscreen="" height="315"></iframe>
 
-      Continuação em Breve......
+      Processando arquivos .dat de aeroportos:
+
+      Pegue o arquivo .dat exportado pelo WED e coloque na pasta "Terragear/bin/APT/data/airports"
+
+      Depois, vá na aba airpors, selecione o arquivo .dat, selecione All airports in .dat file e clique em Generate Airports.
+
+      <iframe width="560" src="https://www.youtube.com/embed/9HGiJG_shQs" frameborder="0" allowfullscreen="" height="315"></iframe>
+
+      Pode demorar um pouco caso o aeroporto seja muito grande e tenha muitos nodes, taxiways ou pistas.
+
+      Para verificar se tudo foi exportado corretamente abra a pasta "Terragear/bin/APT/work/" e verifique que foi criada as pasta AirportObj e AirportArea.
+
+      <iframe width="560" src="https://www.youtube.com/embed/Il9OofowfDE" frameborder="0" allowfullscreen="" height="315"></iframe>
 
     - ##### Finalizando
 
-      Em breve...
+      Para gerar o cenário é necessário que você já tenha feito:
+
+      - Decodificado arquivos de elevação SRTM
+      - Decodificado arquivos de LandClass
+      - Decodificado arquivo .dat do aeroporto
+
+      Va na aba Construct.
+
+      Agora para gerar o cenário temos 2 opções.
+      Gerar o cenário em uma área demarcada em um mapa, ou, gerar o cenário de somente um quadrado (chamado tile) inserindo seu ID manualmente.
+
+      Caso for por demarcar em um mapa é preciso ir na aba Download e marcar a área selecionada.
+
+      <iframe width="560" src="https://www.youtube.com/embed/XJjWlWv0WYM" frameborder="0" allowfullscreen="" height="315"></iframe>
+
+      Caso for por ID de tile apenas escreva o ID no campo Tile ID.
+
+      Agora clique em Update list.
+      Deixe todos selecionados em Terrain Types e clique Generate Scenery.
+
+      <iframe width="560" src="https://www.youtube.com/embed/thCz6MDlF0w" frameborder="0" allowfullscreen="" height="315"></iframe>
+
+      Caso ele de um erro e não gere o cenário desmarque um por um (menos o Default) da lista de Terrain Types, para encontrar o que está causando o problema.
+
+      Pode demorar bastante, dependendo do tamanho da área e da complexidade das LandClasses que você utilizou.
+
+      Por fim para pegar os arquivos gerados e colocar num cenário customizado basta ir em "Terragear/bin/APT/output" e copiar a pasta Terrain para sua pasta de cenario.
+
+      <iframe width="560" src="https://www.youtube.com/embed/DUqdq0INPDE" frameborder="0" allowfullscreen="" height="315"></iframe>
+
+      Pronto agora só entrar no simulador, escolher este aeroporto e voar? Sim! Mas agora seria uma boa hora para você colocar objetos no cenário. Ou melhorar ainda mais editando as LandClasses utilizadas.
+
+      <iframe width="560" src="https://www.youtube.com/embed/hRXfMb6W" frameborder="0" allowfullscreen="" height="315"></iframe>
+
+      No meu caso a falta de LandClasses detalhadas deixou tudo com uma textura só de Floresta.
+      Além de que pelo terreno não ser plano o aeroporto tem algumas partes suspensas e é bem elevado. Da pra editar o arquivo .dat no WED para tentar amenizar.
+
+      E aqui fica as imagens do aeroporto depois de editar as LandClasses.
+
+      ![Tut](assets/img/comocriaroueditaraeroportos/tut02.jpg?raw=true "Tut")
+
+      ![Tut](assets/img/comocriaroueditaraeroportos/tut03.jpg?raw=true "Tut")
 
 ### Seção: Aeronave
 

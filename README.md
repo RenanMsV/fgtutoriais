@@ -15,6 +15,8 @@
   - ##### [Sons](#seção-sons)
   - ##### [Modelagem](#seção-modelagem)
     - [Como fazer modelos 3d para o FlightGear](#como-fazer-modelos-3d-para-o-flightgear)
+  - ##### [Animação](#seção-animação)
+    - [Conhecendo os AXIS e suas relações](#conhecendo-os-AXIS-e-suas-relações)
   - ##### [Texturização](#seção-texturização)
     - [Como fazer texturas noturnas para modelos 3d](#como-fazer-texturas-noturnas-para-modelos-3d)
 
@@ -904,3 +906,23 @@
     - Crie uma nova camada, sete o tipo para Subexposição de Cor.
     - Selecione o Pincel, em dureza coloque 1, e em tamanho coloque o valor que quiser. Escolha uma cor e pinte as luzes. Separe cada cor de luz em uma nova camada.
     - Por fim junte todas as camadas (com cuidado para não bugar) e salve em PNG.
+
+### Seção: Animação
+  - #### Conhecendo os AXIS e suas relações
+    - AC3D X é FGFS X
+    - AC3D Y é FGFS Z
+    - AC3D Z é FGFS -Y
+
+    - Blender X é FGFS Z
+    - Blender Y é FGFS X
+    - Blender Z é FGFS Y
+
+    - AC3D X é Blender X
+    - AC3D Y é Blender Z
+    - AC3D Z é Blender -Y
+
+    - FGFS X é frente/tras (positivo é tras)
+    - FGFS Y é direita/esquerda (positivo é direita)
+    - FGFS Z é cima/baixo (positivo é cima)
+
+    - Na simulação CFD da mesh voce inverte o eixo Z, voce precisa fazer o mesmo com JSBsim

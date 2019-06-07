@@ -16,7 +16,7 @@
   - ##### [Modelagem](#seção-modelagem)
     - [Como fazer modelos 3d para o FlightGear](#como-fazer-modelos-3d-para-o-flightgear)
   - ##### [Animação](#seção-animação)
-    - [Conhecendo os AXIS e suas relações](#conhecendo-os-AXIS-e-suas-relações)
+    - [Conhecendo os AXIS e suas relações](#conhecendo-os-axis-e-suas-relações)
   - ##### [Texturização](#seção-texturização)
     - [Como fazer texturas noturnas para modelos 3d](#como-fazer-texturas-noturnas-para-modelos-3d)
 

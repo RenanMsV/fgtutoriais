@@ -203,6 +203,9 @@
 
       Open Street Maps - Shapefiles Wiki. Contém vários sites para download de Landclasses.
       Para baixar : [https://wiki.openstreetmap.org/wiki/Shapefiles](https://wiki.openstreetmap.org/wiki/Shapefiles)
+      
+      Open Stree Maps - Land Polygons. Contém o mundo todo extraido apenas com uma textura. Util para fazer regiões costeiras ou ilhas.
+      Para baixar : [https://osmdata.openstreetmap.de/data/land-polygons.html](https://osmdata.openstreetmap.de/data/land-polygons.html)
 
       GeoFabrik - Região Brasileira
       Para baixar : [http://download.geofabrik.de/south-america/brazil.html](http://download.geofabrik.de/south-america/brazil.html)

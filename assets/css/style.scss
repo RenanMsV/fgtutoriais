@@ -2,3 +2,42 @@
 ---
 
 @import 'jekyll-theme-dinky';
+
+/* Dark mode via prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0d1117;
+    color: #c9d1d9;
+  }
+
+  a {
+    color: #58a6ff;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #e1e4e8;
+  }
+
+  code {
+    color: #c9d1d9;
+  }
+
+  pre {
+    background: #000000;
+    color: #c9d1d9;
+  }
+
+  pre.highlight {
+    background-color: #0e1623;
+  }
+
+  .highlight .nt {
+    color: #ffc580;
+  }
+
+  .highlight .s {
+    color: #8ed0ff;
+  }
+
+  /* etc… */
+}
